@@ -17,7 +17,7 @@ class Dxl(Linter):
 
     """Provides an interface to dxl."""
 
-    syntax = ''
+    syntax = 'dxl'
     cmd = 'dxl'
     executable = None
     regex = r''
