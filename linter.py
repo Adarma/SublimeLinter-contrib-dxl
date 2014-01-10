@@ -18,16 +18,13 @@ class Dxl(Linter):
     """Provides an interface to dxl."""
 
     syntax = 'dxl'
-    cmd = 'dxl'
-    executable = None
-    regex = r'^-E- DXL: <(?P<path>.*):(?P<line>[0-9]+)> (?P<error>.*)$'
-    multiline = False
-    line_col_base = (1, 1)
-    tempfile_suffix = None
-    error_stream = util.STREAM_BOTH
-    selectors = {}
-    word_re = None
-    defaults = {}
-    inline_settings = None
-    inline_overrides = None
-    comment_re = None
+    cmd = 'C:/Portable/SU336B~1/Data/Packages/DXL/Lint/DxlLint.exe @'
+
+    regex = (
+        r'^-(?:(?P<error>E)|(?P<warning>W))- DXL:'
+        r' <(?P<path>.*):(?P<line>[0-9]+)> '
+        r'(?P<message>(?:undeclared variable|incorrect arguments for) \((?P<near>.*)\)|.*)$'
+    )
+
+    tempfile_suffix = 'dxl'
+    error_stream = util.STREAM_STDOUT
