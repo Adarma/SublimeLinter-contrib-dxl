@@ -1,24 +1,16 @@
 SublimeLinter-dxl
 =========================
 
-This linter plugin for [SublimeLinter][docs] provides an interface to [dxl](__linter_homepage__). It will be used with files that have the “__syntax__” syntax.
+This linter plugin for [SublimeLinter][docs] provides an interface to the linter of [dxl][dxl]. It will be used with files that have the “dxl” syntax.
 
 ## Installation
+
+### SublimeLinter 3 installation
+
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
 
-### Linter installation
-Before using this plugin, you must ensure that `dxl` is installed on your system. To install `dxl`, do the following:
-
-1. Install Other.
-
-1. Install `dxl` by typing the following in a terminal:
-   ```
-   <package manager> install dxl
-   ```
-
-Once `dxl` is installed, you must ensure it is in your system PATH so that SublimeLinter can find it. This may not be as straightforward as you think, so please read about [how linter executables are located][locating-executables] in the documentation.
-
-Once you have installed `dxl` you can proceed to install the SublimeLinter-dxl plugin if it is not yet installed.
+### DXL Linter installation
+The DXL Sublime Text package must be installed in order to use this plugin. If the DXL package is not installed, please follow the instructions [here][dxl].
 
 ### Plugin installation
 Please use [Package Control][pc] to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
@@ -27,7 +19,7 @@ To install via Package Control, do the following:
 
 1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
 
-1. When the plugin list appears, type `dxl`. Among the entries you should see `SublimeLinter-dxl`. If that entry is not highlighted, use the keyboard or mouse to select it.
+2. When the plugin list appears, type `dxl`. Among the entries you should see `SublimeLinter-dxl`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
@@ -65,3 +57,4 @@ Thank you for helping out!
 [settings]: http://sublimelinter.readthedocs.org/en/latest/settings.html
 [linter-settings]: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
 [inline-settings]: http://sublimelinter.readthedocs.org/en/latest/settings.html#inline-settings
+[dxl]: https://github.com/Adarma/DXL
