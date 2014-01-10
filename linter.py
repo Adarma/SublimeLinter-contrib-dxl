@@ -20,7 +20,7 @@ class Dxl(Linter):
     syntax = 'dxl'
     cmd = 'dxl'
     executable = None
-    regex = r''
+    regex = r'^-E- DXL: <(?P<path>.*):(?P<line>[0-9]+)> (?P<error>.*)$'
     multiline = False
     line_col_base = (1, 1)
     tempfile_suffix = None
