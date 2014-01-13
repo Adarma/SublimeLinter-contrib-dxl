@@ -11,14 +11,16 @@
 """This module exports the Dxl plugin class."""
 
 from SublimeLinter.lint import Linter, util
+from os.path import abspath, dirname, join
 
+BASE_PATH = abspath(dirname(__file__))
 
 class Dxl(Linter):
 
     """Provides an interface to dxl."""
 
     syntax = 'dxl'
-    cmd = 'C:/Portable/SU336B~1/Data/Packages/DXL/Lint/DxlLint.exe @'
+    cmd = '"' + join(BASE_PATH, "..", "DXL", "Lint", "dxl.exe") + '"'
 
     regex = (
         r'^-(?:(?P<error>E)|(?P<warning>W))- DXL:'
