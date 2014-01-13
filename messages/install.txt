@@ -7,4 +7,4 @@ This linter plugin for SublimeLinter provides an interface to dxl.
 Before this plugin will activate, you *must*
 follow the installation instructions here:
 
-https://github.com/yks0051/SublimeLinter-dxl
+https://github.com/Adarma/SublimeLinter-contrib-dxl
