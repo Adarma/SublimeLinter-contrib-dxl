@@ -25,7 +25,7 @@ class Dxl(Linter):
     regex = (
         r'^-(?:(?P<error>E)|(?P<warning>W))- DXL:'
         r' <(?P<path>.*):(?P<line>[0-9]+)> '
-        r'''(?P<message>(?:undeclared variable|incorrect arguments for|Invaild '//<Requires>' syntax: Expected '#include '|could not (?:open|run) include file) \((?P<near>.*?)\).*|.*)$'''
+        r'''(?P<message>(?:undeclared variable|badly formed token|incorrect arguments for|Invaild '//<Requires>' syntax: Expected '#include '|could not (?:open|run) include file) \((?P<near>.*?)\).*|.*)$'''
     )
 
     tempfile_suffix = 'dxl'
