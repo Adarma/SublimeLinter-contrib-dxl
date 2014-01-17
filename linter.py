@@ -20,12 +20,12 @@ class Dxl(Linter):
     """Provides an interface to dxl."""
 
     syntax = 'dxl'
-    cmd = '"' + join(BASE_PATH, "..", "DXL", "Lint", "dxl.exe") + '"'
+    cmd = [join(BASE_PATH, '..', 'DXL', 'Lint', 'dxl.exe')]
 
     regex = (
         r'^-(?:(?P<error>E)|(?P<warning>W))- DXL:'
-        r' <(?P<path>.*):(?P<line>[0-9]+)> '
-        r'''(?P<message>(?:undeclared variable|badly formed token|incorrect arguments? for(?: function)|Invaild '//<Requires>' syntax: Expected '#include '|could not (?:open|run) include file) \((?P<near>.*?)\).*|.*)$'''
+        r' <(?P<path>.*?):(?P<line>[0-9]+)> '
+        r'''(?P<message>(?:undeclared variable|badly formed token|incorrect arguments? for(?: function)|Invalid '//<Requires>' syntax: Expected '#include '|could not (?:open|run) include file) \((?P<near>.*?)\).*|.*)'''
     )
 
     tempfile_suffix = 'dxl'
