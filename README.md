@@ -3,6 +3,8 @@ SublimeLinter-dxl
 
 This linter plugin for [SublimeLinter][docs] provides an interface to the linter of [dxl][dxl]. It will be used with files that have the “dxl” syntax.
 
+This plugin is for Windows operating systems only becuase the [dxl][dxl] linter is Windows only.
+
 ## Installation
 
 ### SublimeLinter 3 installation
