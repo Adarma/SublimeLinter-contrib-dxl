@@ -11,16 +11,26 @@
 """This module exports the Dxl plugin class."""
 
 from SublimeLinter.lint import Linter, util
-from os.path import abspath, dirname, join
+from os.path import abspath, dirname, join, isfile
 
-BASE_PATH = abspath(dirname(__file__))
+def LinterPath():
+    """Ascertain the dxl.exe path from this .py files path because sublime.packages_path is unavailable at startup."""
+    ThisPath = abspath(dirname(__file__))
+    if isfile(ThisPath):
+        # We are in a .sublime-package file in the 'Installed Package' folder
+        return abspath(join(ThisPath, '..', '..', 'Packages', 'DXL', 'Lint', 'dxl.exe'))
+    else:
+        # We are in a subfolder of the 'Packages' folder
+        return abspath(join(ThisPath, '..', 'DXL', 'Lint', 'dxl.exe'))
+
+LINTER_PATH = LinterPath()
 
 class Dxl(Linter):
 
     """Provides an interface to dxl."""
 
     syntax = 'dxl'
-    cmd = [join(BASE_PATH, '..', 'DXL', 'Lint', 'dxl.exe')]
+    cmd = [LINTER_PATH]
 
     regex = (
         r'^-(?:(?P<error>E)|(?P<warning>W))- DXL:'
