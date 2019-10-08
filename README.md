@@ -7,9 +7,9 @@ This plugin is for Windows operating systems only becuase the [dxl][dxl] linter 
 
 ## Installation
 
-### SublimeLinter 3 installation
+### SublimeLinter installation
 
-SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
+SublimeLinter must be installed in order to use this plugin. If SublimeLinter is not installed, please follow the instructions [here][installation].
 
 ### DXL Linter installation
 The DXL Sublime Text package must be installed in order to use this plugin. If the DXL package is not installed, please follow the instructions [here][dxl].

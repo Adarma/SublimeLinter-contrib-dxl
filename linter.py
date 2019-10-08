@@ -1,6 +1,6 @@
 #
 # linter.py
-# Linter for SublimeLinter3, a code checking framework for Sublime Text 3
+# Linter for SublimeLinter, a code checking framework for Sublime Text 3
 #
 # Written by Adam Cadamally
 # Copyright (c) 2014 Adam Cadamally
@@ -29,7 +29,10 @@ class Dxl(Linter):
 
     """Provides an interface to dxl."""
 
-    syntax = 'dxl'
+    defaults = {
+        'selector': 'source.dxl'
+    }
+
     cmd = [LINTER_PATH]
 
     regex = (
